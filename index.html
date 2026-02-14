@@ -25,7 +25,18 @@
                     Add projects and commitments, change preferences
                 </div>
                 <div class="row">
-                    <button type="button" class="btn btn-outline-primary" id="add_project">Add new project</button>
+                    <button type="button" class="btn btn-outline-primary" id="add_project_btn" onclick="openaddprojectForm()">Add new project</button>
+                    <div class="form-popup" id="addProjectForm">
+                      <form action="create_new_project.php" class="form-container">
+                        <h1>Create New Project</h1>
+                        <label for="project name"><b>Project Name</b></label>
+                        <input type="text" placeholder="Enter Project Name" name="project name" required>
+                        
+                        
+                        <button type="submit" class="btn">Create</button>
+                        <button type="button" class="btn cancel" onclick="closeaddprojectForm()">Close</button>
+                      </form>
+                    </div>
                 </div>
                 <div class="row">
                     <button type="button" class="btn btn-outline-primary" id="add_commitment">Add new commitment</button>
